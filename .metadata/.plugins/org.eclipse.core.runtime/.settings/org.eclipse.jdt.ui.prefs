@@ -1,0 +1,10 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.lang.Enum"><rhs name\="java.util.concurrent.TimeUnit"/></lhs><lhs name\="java.lang.constant.Constable"><rhs name\="java.util.concurrent.TimeUnit"/></lhs><lhs name\="MapObjet.MapObjetMercadoLibre"><rhs name\="PagObjet.PagObjetInicioMercadoLibre"/></lhs><lhs name\="SemilleroPom.ClaseBase"><rhs name\="PagObjet.PagObjetInicioMercadoLibre"/><rhs name\="PagObjet.PagsObjetInicio"/><rhs name\="PagObjet.PagObjetHome"/><rhs name\="PagObjet.PagObjetElements"/><rhs name\="PagObjet.PagObjetInicio"/><rhs name\="PagObjet.PagObjetWidgets"/></lhs><lhs name\="PagObjet.PagObjetInicioMercadoLibre"><rhs name\="PagObjet.PagObjetInicioMercadoLibre"/></lhs><lhs name\="MapObjet.MapsObjetInicio"><rhs name\="PagObjet.PagsObjetInicio"/></lhs><lhs name\="PagObjet.PagsObjetInicio"><rhs name\="PagObjet.PagsObjetInicio"/></lhs><lhs name\="MapObjet.MapObjetHome"><rhs name\="PagObjet.PagObjetHome"/></lhs><lhs name\="PagObjet.PagObjetHome"><rhs name\="PagObjet.PagObjetHome"/></lhs><lhs name\="MapObjet.MapObjetInicio"><rhs name\="PagObjet.PagObjetInicio"/></lhs><lhs name\="PagObjet.PagObjetInicio"><rhs name\="PagObjet.PagObjetInicio"/></lhs><lhs name\="MapObjet.MapObjetElements"><rhs name\="PagObjet.PagObjetElements"/></lhs><lhs name\="PagObjet.PagObjetElements"><rhs name\="PagObjet.PagObjetElements"/></lhs><lhs name\="MapObjet.MapObjetWidgets"><rhs name\="PagObjet.PagObjetWidgets"/></lhs><lhs name\="PagObjet.PagObjetWidgets"><rhs name\="PagObjet.PagObjetWidgets"/></lhs><lhs name\="org.openqa.selenium.By"><rhs name\="org.openqa.selenium.By$ById"/></lhs></history>
+content_assist_number_of_computers=13
+eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.formatterprofiles.version=21
+spelling_locale_initialized=true
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

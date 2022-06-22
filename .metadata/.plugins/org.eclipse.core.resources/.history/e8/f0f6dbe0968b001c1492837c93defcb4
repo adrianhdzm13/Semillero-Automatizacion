@@ -1,0 +1,117 @@
+package PagObjet;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+
+import MapObjet.MapObjetInicio;
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
+import utilidadesExcel.ReadExcelFile;
+
+public class PagObjetInicio extends MapObjetInicio {
+
+	// CONSTRUCCTOR DE LA CLASE
+	@SuppressWarnings("unchecked")
+	public PagObjetInicio(WebDriver driver) {
+		super(driver);
+		this.driver = (AppiumDriver<MobileElement>) driver;
+	}
+
+	public void inicio(ReadExcelFile leer, Properties propiedades, String nomHoja, File rutaCarpeta)
+			throws InterruptedException, IOException, Exception {
+
+		// VARIABLES
+		String valor1;
+		String valor2;
+
+		click(btnClear, rutaCarpeta);
+
+		// ESTABLECE EL PRIMER VALOR DEL EXCEL
+		@SuppressWarnings("unused")
+		int num1 = leer.getCellValueInt(propiedades.getProperty("filePathExcel"), "inicio", 1, 0);
+
+		unidadesNumer(num1);
+		// CONCATENA EL VALOR
+		valor1 = allBtn + unidadesNumer(num1) + "_s";
+		clickNumExcel(valor1, rutaCarpeta);
+
+		// CONVERTIR EL PRIMER NUMERO A UNIDADES
+		// ARRAY PARA NUMEROS DE 10 CIFRAS
+		/*
+		 * int[] cifras = new int[10];
+		 * 
+		 * int i = 0;
+		 * 
+		 * while (num1 > 0) { cifras[i] = num1 % 10; num1 = num1 / 10; i++; }
+		 * 
+		 * for (int j = i - 1; j >= 0; j--) {
+		 * 
+		 * // CONCATENA EL VALOR valor1 = allBtn + cifras[j] + "_s";
+		 * clickNumExcel(valor1, rutaCarpeta);
+		 * 
+		 * }
+		 */
+
+		// ESTABLECE LA OPERACION
+		String operador = leer.getCellValue(propiedades.getProperty("filePathExcel"), "inicio", 1, 2);
+		String operacion = allOperador + operador + "']";
+
+		clickOperacion(operacion, rutaCarpeta);
+
+		// ESTABLECE EL SEGUNDO VALOR VALOR DEL EXCEL
+		int num2 = leer.getCellValueInt(propiedades.getProperty("filePathExcel"), "inicio", 1, 1);
+
+		// CONVERTIR EL PRIMER NUMERO A UNIDADES
+		// ARRAY PARA NUMEROS DE 10 CIFRAS
+		int[] cifras2 = new int[10];
+
+		int a = 0;
+
+		while (num2 > 0) {
+			cifras2[a] = num2 % 10;
+			num2 = num2 / 10;
+			a++;
+		}
+
+		for (int p = a - 1; p >= 0; p--) {
+
+			// CONCATENA EL VALOR
+			valor2 = allBtn + cifras2[p] + "_s";
+			clickNumExcel(valor2, rutaCarpeta);
+
+		}
+
+		// LIMPIAR
+		click(btnIgual, rutaCarpeta);
+		tiempoEspera(2);
+	}
+
+	public int unidadesNumer(int num1) {
+
+		// String valor1 = null;
+		int[] cifras = new int[10];
+		int[] cifrasInverso = new int[10];
+		int num2 = 0;
+
+		int i = 0;
+
+		while (num1 > 0) {
+			cifras[i] = num1 % 10;
+			num1 = num1 / 10;
+			i++;
+		}
+		for (int j = i - 1; j >= 0; j--) {
+
+			// CONCATENA EL VALOR
+			cifrasInverso[i] =  cifras[j];
+			
+
+		}
+
+		return cifrasInverso[i];
+	}
+
+}
